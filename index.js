@@ -165,6 +165,11 @@ let n2 = 99;
 
 while (true) {
   let guess = prompt("終極密碼:(在" + n1 + "到" + n2 + "之間)");
+  
+  if (guess < n1 || guess > n2) {
+    alert("請輸入有效的數字");
+    continue;
+  }
 
   if (guess == ans) {
     alert("沒錯!答案就是" + ans);
